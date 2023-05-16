@@ -46,3 +46,29 @@ body {
     padding: 10px;
     text-align: center;
   }
+  
+  .image-container {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+    animation: scroll 10s linear infinite;
+    animation-play-state: running;
+  }
+  
+  .image-container:hover img {
+    animation-play-state: paused;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
